@@ -1,0 +1,24 @@
+class {
+  onInput(input) {
+    input.colors = input.colors || [
+      "red",
+      "green",
+      "blue",
+      "orange",
+      "yellow"
+    ];
+
+    this.state = {
+      backgroundColor: input.colors[0],
+      contrastColor: "#FFFFFF"
+    };
+  }
+
+  onColorSelected(data) {
+    this.state.backgroundColor = data.backgroundColor;
+    this.state.contrastColor = data.contrastColor;
+  }
+}
+
+<colour-picker-header backgroundColor=state.backgroundColor color=state.contrastColor/>
+<colour-picker-footer colors=input.colors on-colorSelected("onColorSelected")/>

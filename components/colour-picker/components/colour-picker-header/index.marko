@@ -1,0 +1,31 @@
+class {
+  onInput(input) {
+    console.log(input)
+    this.state = {
+      backgroundColor: input.backgroundColor || "red",
+      color: input.color || "white"
+    };
+  }
+}
+
+$ var backgroundColor = state.backgroundColor;
+$ var foregroundColor = state.color;
+
+style {
+  .colour-picker-header {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px 20px 0 0;
+    font: 30px Arial;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .colour-picker-header > p {
+    margin-top: 1.15em;
+  }
+}
+
+<div.colour-picker-header style={backgroundColor, color: foregroundColor}>
+  <p>${backgroundColor}</p>
+</div>

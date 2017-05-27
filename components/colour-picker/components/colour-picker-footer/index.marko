@@ -1,0 +1,13 @@
+$ var colors = input.colors;
+
+<div.colour-picker-footer>
+  <div.colour-picker-selection-container>
+    <div for(color in colors)>
+      <colour-picker-selection backgroundColor=color on-colorSelected('onColorSelected')/>
+    </div>
+    <input
+      key="hexInput"
+      placeholder="Hex value"
+      on-input('onHexInput')/>
+  </div>
+</div>
